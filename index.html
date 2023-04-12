@@ -40,7 +40,7 @@
       .then(response => response.json())
       .then(data => {
         data.sort((a,b) => parseInt(a.name.split('.')[0]) - parseInt(b.name.split('.')[0]));
-        // console.log(data);
+        console.log(data);
         data.forEach(function(item) {
           if (item.type === 'file' && item.name.endsWith('.png')) {
         images.push(item.download_url);
@@ -82,8 +82,8 @@
         <h1>实盘交易回顾</h1>
         <img id="image" src="">
         <div id="buttons">
-            <button onclick="next()">下个案例</button>
             <button onclick="buy()">买点及前期走势</button>
+            <button onclick="next()">下个案例</button>
             <button onclick="sell()">卖点及后期走势</button>
         </div>
     </div>
